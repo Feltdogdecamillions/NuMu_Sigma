@@ -98,14 +98,14 @@ export default function Support() {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 py-16">
+      <section className="bg-gradient-to-br from-royal-blue-900 to-royal-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <Heart className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               Support Our Mission
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Partner with us to make a lasting impact in Southwest Florida
             </p>
           </div>
@@ -129,9 +129,9 @@ export default function Support() {
               return (
                 <div
                   key={index}
-                  className="bg-blue-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border-2 border-blue-100"
+                  className="bg-royal-blue-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border-2 border-royal-blue-100"
                 >
-                  <Icon className="h-12 w-12 text-blue-600 mb-4" />
+                  <Icon className="h-12 w-12 text-royal-blue mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">{option.title}</h3>
                   <p className="text-slate-700 mb-6 leading-relaxed">{option.description}</p>
                   <h4 className="font-semibold text-slate-900 mb-3">Benefits:</h4>
@@ -139,7 +139,7 @@ export default function Support() {
                     {option.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-start">
                         <div className="flex-shrink-0 mt-1">
-                          <div className="h-2 w-2 rounded-full bg-blue-600" />
+                          <div className="h-2 w-2 rounded-full bg-royal-blue" />
                         </div>
                         <span className="ml-3 text-slate-700">{benefit}</span>
                       </li>
@@ -171,26 +171,26 @@ export default function Support() {
                 </p>
               </div>
 
-              <div className="mt-8 bg-white rounded-xl p-6 border-2 border-blue-600">
+              <div className="mt-8 bg-white rounded-xl p-6 border-2 border-royal-blue">
                 <h3 className="text-xl font-bold text-slate-900 mb-4">
                   Our Impact
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Community Members Served</span>
-                    <span className="font-bold text-blue-600">500+</span>
+                    <span className="font-bold text-royal-blue">500+</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Youth Mentored</span>
-                    <span className="font-bold text-blue-600">50+</span>
+                    <span className="font-bold text-royal-blue">50+</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Scholarships Awarded</span>
-                    <span className="font-bold text-blue-600">$25,000+</span>
+                    <span className="font-bold text-royal-blue">$25,000+</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Volunteer Hours</span>
-                    <span className="font-bold text-blue-600">1,000+</span>
+                    <span className="font-bold text-royal-blue">1,000+</span>
                   </div>
                 </div>
               </div>
@@ -203,11 +203,11 @@ export default function Support() {
                 </h3>
 
                 {success && (
-                  <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <div className="mb-6 p-4 bg-royal-blue-50 border border-royal-blue-200 rounded-lg flex items-start">
+                    <CheckCircle className="h-5 w-5 text-royal-blue flex-shrink-0 mt-0.5" />
                     <div className="ml-3">
-                      <p className="text-blue-800 font-medium">Thank you for your interest!</p>
-                      <p className="text-blue-700 text-sm mt-1">We'll be in touch soon to discuss partnership opportunities.</p>
+                      <p className="text-royal-blue-800 font-medium">Thank you for your interest!</p>
+                      <p className="text-royal-blue-700 text-sm mt-1">We'll be in touch soon to discuss partnership opportunities.</p>
                     </div>
                   </div>
                 )}
@@ -229,7 +229,7 @@ export default function Support() {
                       name="organization_name"
                       value={formData.organization_name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     />
                   </div>
 
@@ -244,7 +244,7 @@ export default function Support() {
                       value={formData.contact_name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     />
                   </div>
 
@@ -259,7 +259,7 @@ export default function Support() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     />
                   </div>
 
@@ -273,7 +273,7 @@ export default function Support() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     />
                   </div>
 
@@ -287,7 +287,7 @@ export default function Support() {
                       value={formData.support_type}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     >
                       <option value="partnership">Partnership Opportunity</option>
                       <option value="donation">Financial Support</option>
@@ -308,7 +308,7 @@ export default function Support() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition resize-none"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition resize-none"
                       placeholder="Share details about how you'd like to support our mission..."
                     />
                   </div>
@@ -316,7 +316,7 @@ export default function Support() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                    className="w-full inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white font-bold rounded-lg hover:bg-royal-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                   >
                     {loading ? (
                       'Sending...'
@@ -334,12 +334,12 @@ export default function Support() {
         </div>
       </section>
 
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-royal-blue-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Together, We Can Do More
           </h2>
-          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+          <p className="text-xl text-white mb-8 leading-relaxed">
             Every partnership, donation, and volunteer hour brings us closer to realizing our vision of a stronger, more vibrant Southwest Florida.
           </p>
           <p className="text-2xl font-bold italic">

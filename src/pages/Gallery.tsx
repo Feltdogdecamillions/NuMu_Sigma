@@ -32,14 +32,14 @@ export default function Gallery() {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 py-16">
+      <section className="bg-gradient-to-br from-royal-blue-900 to-royal-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <Image className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               Photo Gallery
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Capturing our commitment to service in Southwest Florida
             </p>
           </div>
@@ -54,14 +54,14 @@ export default function Gallery() {
               return (
                 <div
                   key={index}
-                  className="bg-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow border-2 border-blue-100 cursor-pointer"
+                  className="bg-royal-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow border-2 border-royal-blue-100 cursor-pointer"
                 >
-                  <Icon className="h-10 w-10 text-blue-600 mb-3" />
+                  <Icon className="h-10 w-10 text-royal-blue mb-3" />
                   <h3 className="text-xl font-bold text-slate-900 mb-2">
                     {category.title}
                   </h3>
                   <p className="text-slate-600 mb-3">{category.description}</p>
-                  <p className="text-blue-600 font-semibold">{category.count} photos</p>
+                  <p className="text-royal-blue font-semibold">{category.count} photos</p>
                 </div>
               );
             })}
@@ -73,10 +73,10 @@ export default function Gallery() {
               {placeholderPhotos.map((_, index) => (
                 <div
                   key={index}
-                  className="aspect-square bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-md hover:shadow-xl transition-shadow flex items-center justify-center group cursor-pointer overflow-hidden"
+                  className="aspect-square bg-gradient-to-br from-royal-blue-100 to-royal-blue-200 rounded-xl shadow-md hover:shadow-xl transition-shadow flex items-center justify-center group cursor-pointer overflow-hidden"
                 >
                   <div className="text-center p-6">
-                    <Image className="h-16 w-16 text-blue-400 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                    <Image className="h-16 w-16 text-royal-blue-300 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                     <p className="text-slate-600 font-medium">Event Photo {index + 1}</p>
                     <p className="text-sm text-slate-500 mt-1">Click to view</p>
                   </div>
@@ -97,7 +97,7 @@ export default function Gallery() {
           </p>
           <a
             href="mailto:photos@numusigma.org"
-            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+            className="inline-flex items-center px-8 py-4 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors shadow-lg"
           >
             Submit Photos
           </a>

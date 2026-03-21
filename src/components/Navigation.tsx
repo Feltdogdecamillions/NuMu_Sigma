@@ -16,14 +16,14 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50 border-b-4 border-blue-600">
+    <nav className="bg-white shadow-md sticky top-0 z-50 border-b-4 border-royal-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <Shield className="h-10 w-10 text-blue-600" />
+              <Shield className="h-10 w-10 text-royal-blue" />
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-blue-600">Nu Mu Sigma</span>
+                <span className="text-xl font-bold text-royal-blue">Nu Mu Sigma</span>
                 <span className="text-xs text-slate-600 font-medium">Phi Beta Sigma</span>
               </div>
             </Link>
@@ -34,7 +34,7 @@ export default function Navigation() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-slate-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-slate-700 hover:text-royal-blue font-medium transition-colors"
               >
                 {link.label}
               </Link>
@@ -44,7 +44,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-700 hover:text-blue-600"
+              className="text-slate-700 hover:text-royal-blue"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -61,7 +61,7 @@ export default function Navigation() {
                 key={link.to}
                 to={link.to}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors"
+                className="block px-3 py-2 text-slate-700 hover:text-royal-blue hover:bg-royal-blue-50 rounded-md font-medium transition-colors"
               >
                 {link.label}
               </Link>

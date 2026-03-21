@@ -51,14 +51,14 @@ export default function Contact() {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 py-16">
+      <section className="bg-gradient-to-br from-royal-blue-900 to-royal-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <Mail className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               Contact Us
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Get in touch with the Nu Mu Sigma Chapter
             </p>
           </div>
@@ -79,8 +79,8 @@ export default function Contact() {
               <div className="space-y-6 mb-10">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Mail className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-royal-blue-100 rounded-lg flex items-center justify-center">
+                      <Mail className="h-6 w-6 text-royal-blue" />
                     </div>
                   </div>
                   <div className="ml-4">
@@ -91,8 +91,8 @@ export default function Contact() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-royal-blue-100 rounded-lg flex items-center justify-center">
+                      <Phone className="h-6 w-6 text-royal-blue" />
                     </div>
                   </div>
                   <div className="ml-4">
@@ -103,8 +103,8 @@ export default function Contact() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-royal-blue-100 rounded-lg flex items-center justify-center">
+                      <MapPin className="h-6 w-6 text-royal-blue" />
                     </div>
                   </div>
                   <div className="ml-4">
@@ -115,7 +115,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+              <div className="bg-royal-blue-50 border border-royal-blue-200 rounded-xl p-6">
                 <h3 className="text-lg font-bold text-slate-900 mb-3">
                   Follow Us on Social Media
                 </h3>
@@ -124,7 +124,7 @@ export default function Contact() {
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                    className="w-10 h-10 bg-royal-blue rounded-lg flex items-center justify-center hover:bg-royal-blue-700 transition-colors"
                   >
                     <Facebook className="h-5 w-5 text-white" />
                   </a>
@@ -132,7 +132,7 @@ export default function Contact() {
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                    className="w-10 h-10 bg-royal-blue rounded-lg flex items-center justify-center hover:bg-royal-blue-700 transition-colors"
                   >
                     <Instagram className="h-5 w-5 text-white" />
                   </a>
@@ -140,7 +140,7 @@ export default function Contact() {
                     href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                    className="w-10 h-10 bg-royal-blue rounded-lg flex items-center justify-center hover:bg-royal-blue-700 transition-colors"
                   >
                     <Twitter className="h-5 w-5 text-white" />
                   </a>
@@ -155,11 +155,11 @@ export default function Contact() {
                 </h3>
 
                 {success && (
-                  <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <div className="mb-6 p-4 bg-royal-blue-50 border border-royal-blue-200 rounded-lg flex items-start">
+                    <CheckCircle className="h-5 w-5 text-royal-blue flex-shrink-0 mt-0.5" />
                     <div className="ml-3">
-                      <p className="text-blue-800 font-medium">Thank you for reaching out!</p>
-                      <p className="text-blue-700 text-sm mt-1">We'll get back to you soon.</p>
+                      <p className="text-royal-blue-800 font-medium">Thank you for reaching out!</p>
+                      <p className="text-royal-blue-700 text-sm mt-1">We'll get back to you soon.</p>
                     </div>
                   </div>
                 )}
@@ -182,7 +182,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     />
                   </div>
 
@@ -197,7 +197,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     />
                   </div>
 
@@ -211,7 +211,7 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     />
                   </div>
 
@@ -226,7 +226,7 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     />
                   </div>
 
@@ -240,7 +240,7 @@ export default function Contact() {
                       value={formData.submission_type}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="program">Program Information</option>
@@ -261,7 +261,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition resize-none"
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 outline-none transition resize-none"
                       placeholder="Tell us how we can help..."
                     />
                   </div>
@@ -269,7 +269,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                    className="w-full inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white font-bold rounded-lg hover:bg-royal-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                   >
                     {loading ? (
                       'Sending...'

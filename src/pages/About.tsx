@@ -22,14 +22,14 @@ export default function About() {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 py-16">
+      <section className="bg-gradient-to-br from-royal-blue-900 to-royal-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <Shield className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               About Nu Mu Sigma Chapter
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               A legacy of service, scholarship, and brotherhood in Southwest Florida
             </p>
           </div>
@@ -56,19 +56,19 @@ export default function About() {
               </div>
             </div>
             <div className="mt-10 lg:mt-0">
-              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-12 aspect-square flex items-center justify-center">
-                <Globe className="h-48 w-48 text-blue-600" />
+              <div className="bg-gradient-to-br from-royal-blue-100 to-royal-blue-200 rounded-2xl p-12 aspect-square flex items-center justify-center">
+                <Globe className="h-48 w-48 text-royal-blue" />
               </div>
             </div>
           </div>
 
-          <div className="bg-blue-50 rounded-2xl p-8 lg:p-12 border-2 border-blue-100 mb-20">
+          <div className="bg-royal-blue-50 rounded-2xl p-8 lg:p-12 border-2 border-royal-blue-100 mb-20">
             <div className="text-center mb-8">
-              <Award className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+              <Award className="h-12 w-12 text-royal-blue mx-auto mb-4" />
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
                 Our Motto
               </h2>
-              <p className="text-2xl lg:text-3xl font-bold text-blue-600 italic">
+              <p className="text-2xl lg:text-3xl font-bold text-royal-blue italic">
                 "Culture for Service and Service for Humanity"
               </p>
             </div>
@@ -122,9 +122,9 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="bg-blue-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border-2 border-blue-100"
+                  className="bg-royal-blue-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border-2 border-royal-blue-100"
                 >
-                  <Icon className="h-14 w-14 text-blue-600 mb-4" />
+                  <Icon className="h-14 w-14 text-royal-blue mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">{value.title}</h3>
                   <p className="text-slate-700 leading-relaxed">{value.description}</p>
                 </div>
@@ -146,32 +146,32 @@ export default function About() {
               </p>
               <ul className="space-y-3 text-lg text-slate-700">
                 <li className="flex items-start">
-                  <Target className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <Target className="h-6 w-6 text-royal-blue flex-shrink-0 mt-1" />
                   <span className="ml-3">Fort Myers and Cape Coral</span>
                 </li>
                 <li className="flex items-start">
-                  <Target className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <Target className="h-6 w-6 text-royal-blue flex-shrink-0 mt-1" />
                   <span className="ml-3">Naples and Bonita Springs</span>
                 </li>
                 <li className="flex items-start">
-                  <Target className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <Target className="h-6 w-6 text-royal-blue flex-shrink-0 mt-1" />
                   <span className="ml-3">Lehigh Acres and Estero</span>
                 </li>
                 <li className="flex items-start">
-                  <Target className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <Target className="h-6 w-6 text-royal-blue flex-shrink-0 mt-1" />
                   <span className="ml-3">Greater Lee and Collier Counties</span>
                 </li>
               </ul>
             </div>
             <div>
-              <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-blue-600">
+              <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-royal-blue">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
                 <p className="text-lg text-slate-700 leading-relaxed mb-6">
                   To exemplify the ideals of brotherhood, scholarship, leadership, and service while promoting the principles of Phi Beta Sigma Fraternity, Incorporated throughout Southwest Florida. Based in Fort Myers and serving communities across the region, we are committed to developing young men into leaders, supporting educational achievement, and addressing critical community needs through sustained action, outreach, and partnership.
                 </p>
                 <Link
                   to="/programs"
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
+                  className="inline-flex items-center text-royal-blue font-semibold hover:text-royal-blue-700"
                 >
                   See Our Programs in Action
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -182,25 +182,25 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-royal-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Join Us in Making a Difference
           </h2>
-          <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+          <p className="text-xl text-white mb-10 leading-relaxed">
             Learn more about our programs, upcoming events, and how you can partner with Nu Mu Sigma Chapter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/programs"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-lg"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-royal-blue font-bold rounded-lg hover:bg-royal-blue-50 transition-colors shadow-lg"
             >
               View Our Programs
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-blue-700 text-white font-bold rounded-lg hover:bg-blue-800 transition-colors border-2 border-white"
+              className="inline-flex items-center justify-center px-8 py-4 bg-royal-blue-700 text-white font-bold rounded-lg hover:bg-royal-blue-800 transition-colors border-2 border-white"
             >
               Contact Us
             </Link>

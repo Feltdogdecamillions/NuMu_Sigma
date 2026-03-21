@@ -79,14 +79,14 @@ export default function Programs() {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 py-16">
+      <section className="bg-gradient-to-br from-royal-blue-900 to-royal-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <Heart className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               Our Programs
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Making a meaningful impact through dedicated service and community engagement
             </p>
           </div>
@@ -117,8 +117,8 @@ export default function Programs() {
                   }`}
                 >
                   <div className={`mb-10 lg:mb-0 ${!isEven ? 'lg:col-start-2' : ''}`}>
-                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-10 shadow-lg border-2 border-blue-200">
-                      <Icon className="h-16 w-16 text-blue-600 mb-6" />
+                    <div className="bg-gradient-to-br from-royal-blue-50 to-royal-blue-100 rounded-2xl p-10 shadow-lg border-2 border-royal-blue-200">
+                      <Icon className="h-16 w-16 text-royal-blue mb-6" />
                       <h2 className="text-3xl font-bold text-slate-900 mb-4">
                         {program.title}
                       </h2>
@@ -133,7 +133,7 @@ export default function Programs() {
                       {program.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start bg-slate-50 rounded-lg p-4">
                           <div className="flex-shrink-0 mt-1">
-                            <div className="h-2 w-2 rounded-full bg-blue-600" />
+                            <div className="h-2 w-2 rounded-full bg-royal-blue" />
                           </div>
                           <span className="ml-4 text-slate-700 font-medium">{feature}</span>
                         </li>
@@ -147,32 +147,32 @@ export default function Programs() {
         </div>
       </section>
 
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-royal-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
               Program Impact
             </h2>
-            <p className="text-xl text-blue-200">
+            <p className="text-xl text-royal-blue-100">
               Measuring our commitment to Southwest Florida
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-blue-800 rounded-xl p-8 text-center">
+            <div className="bg-royal-blue-800 rounded-xl p-8 text-center">
               <div className="text-5xl font-bold mb-3">500+</div>
-              <div className="text-blue-200">Community Members Served</div>
+              <div className="text-royal-blue-100">Community Members Served</div>
             </div>
-            <div className="bg-blue-800 rounded-xl p-8 text-center">
+            <div className="bg-royal-blue-800 rounded-xl p-8 text-center">
               <div className="text-5xl font-bold mb-3">50+</div>
-              <div className="text-blue-200">Youth Mentored Annually</div>
+              <div className="text-royal-blue-100">Youth Mentored Annually</div>
             </div>
-            <div className="bg-blue-800 rounded-xl p-8 text-center">
+            <div className="bg-royal-blue-800 rounded-xl p-8 text-center">
               <div className="text-5xl font-bold mb-3">$25K+</div>
-              <div className="text-blue-200">In Scholarships Awarded</div>
+              <div className="text-royal-blue-100">In Scholarships Awarded</div>
             </div>
-            <div className="bg-blue-800 rounded-xl p-8 text-center">
+            <div className="bg-royal-blue-800 rounded-xl p-8 text-center">
               <div className="text-5xl font-bold mb-3">1000+</div>
-              <div className="text-blue-200">Volunteer Hours</div>
+              <div className="text-royal-blue-100">Volunteer Hours</div>
             </div>
           </div>
         </div>
@@ -189,14 +189,14 @@ export default function Programs() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/support"
-              className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+              className="inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white font-bold rounded-lg hover:bg-royal-blue-700 transition-colors shadow-lg"
             >
               Become a Partner
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-royal-blue font-bold rounded-lg border-2 border-royal-blue hover:bg-royal-blue-50 transition-colors"
             >
               Contact Us
             </Link>

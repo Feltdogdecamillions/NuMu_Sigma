@@ -73,14 +73,14 @@ export default function Events() {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 py-16">
+      <section className="bg-gradient-to-br from-royal-blue-900 to-royal-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <Calendar className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               Events
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Join us in making a difference in Southwest Florida
             </p>
           </div>
@@ -102,13 +102,13 @@ export default function Events() {
             {upcomingEvents.map((event, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border-l-4 border-blue-600 overflow-hidden"
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border-l-4 border-royal-blue overflow-hidden"
               >
                 <div className="p-6 lg:p-8">
                   <div className="lg:flex lg:items-start lg:justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">
+                        <span className="inline-block px-3 py-1 bg-royal-blue-100 text-royal-blue-700 text-sm font-semibold rounded-full">
                           {event.category}
                         </span>
                       </div>
@@ -120,15 +120,15 @@ export default function Events() {
                       </p>
                       <div className="flex flex-wrap gap-4 text-slate-700">
                         <div className="flex items-center">
-                          <Calendar className="h-5 w-5 text-blue-600 mr-2" />
+                          <Calendar className="h-5 w-5 text-royal-blue mr-2" />
                           <span className="font-medium">{event.date}</span>
                         </div>
                         <div className="flex items-center">
-                          <Clock className="h-5 w-5 text-blue-600 mr-2" />
+                          <Clock className="h-5 w-5 text-royal-blue mr-2" />
                           <span>{event.time}</span>
                         </div>
                         <div className="flex items-center">
-                          <MapPin className="h-5 w-5 text-blue-600 mr-2" />
+                          <MapPin className="h-5 w-5 text-royal-blue mr-2" />
                           <span>{event.location}</span>
                         </div>
                       </div>
@@ -136,7 +136,7 @@ export default function Events() {
                     <div className="mt-6 lg:mt-0 lg:ml-8">
                       <Link
                         to="/contact"
-                        className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap"
+                        className="inline-flex items-center px-6 py-3 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors whitespace-nowrap"
                       >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -168,12 +168,12 @@ export default function Events() {
                 className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-start mb-3">
-                  <Calendar className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                  <Calendar className="h-6 w-6 text-royal-blue mr-2 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">
                       {event.title}
                     </h3>
-                    <p className="text-blue-600 font-semibold mb-2">{event.date}</p>
+                    <p className="text-royal-blue font-semibold mb-2">{event.date}</p>
                   </div>
                 </div>
                 <p className="text-slate-600">{event.description}</p>
@@ -183,18 +183,18 @@ export default function Events() {
         </div>
       </section>
 
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-royal-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Users className="h-16 w-16 text-white mx-auto mb-6" />
           <h2 className="text-4xl font-bold text-white mb-6">
             Stay Connected
           </h2>
-          <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+          <p className="text-xl text-white mb-10 leading-relaxed">
             Want to receive updates about upcoming events and programs? Get in touch with us to join our mailing list.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-lg"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-royal-blue font-bold rounded-lg hover:bg-royal-blue-50 transition-colors shadow-lg"
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
