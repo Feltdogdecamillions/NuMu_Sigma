@@ -52,7 +52,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
             <div className="inline-block mb-6">
-              <Award className="h-20 w-20 text-white mx-auto mb-4" />
+              <img
+                src="/NuMu_Sigma_Logo.jpeg"
+                alt="Nu Mu Sigma Chapter Logo"
+                className="h-40 w-40 lg:h-48 lg:w-48 mx-auto mb-4 rounded-full shadow-2xl border-4 border-white"
+              />
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold mb-4">
               Nu Mu Sigma Chapter
