@@ -55,7 +55,7 @@ export default function Home() {
               <img
                 src="/NuMu_Sigma_Logo.jpeg"
                 alt="Nu Mu Sigma Chapter Logo"
-                className="h-40 w-40 lg:h-48 lg:w-48 mx-auto mb-4 rounded-full shadow-2xl border-4 border-white"
+                className="h-40 w-40 lg:h-52 lg:w-52 mx-auto mb-4 shadow-2xl"
               />
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold mb-4">
