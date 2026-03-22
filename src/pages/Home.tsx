@@ -53,7 +53,7 @@ export default function Home() {
           <div className="text-center">
             <div className="inline-block mb-6">
               <img
-                src="/NuMu_Sigma_Logo.jpeg"
+                src="/NuMu_Sigma_Logo2.PNG"
                 alt="Nu Mu Sigma Chapter Logo"
                 className="h-40 w-40 lg:h-52 lg:w-52 mx-auto mb-4 shadow-2xl"
               />
