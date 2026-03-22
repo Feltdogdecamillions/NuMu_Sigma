@@ -11,6 +11,7 @@ export default function Navigation() {
     { to: '/programs', label: 'Programs' },
     { to: '/events', label: 'Events' },
     { to: '/gallery', label: 'Gallery' },
+    { to: '/members', label: 'Members Only' },
     { to: '/contact', label: 'Contact' },
     { to: '/support', label: 'Support Us' },
   ];

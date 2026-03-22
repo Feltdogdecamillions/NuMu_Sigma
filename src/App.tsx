@@ -8,6 +8,7 @@ import Events from './pages/Events';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Support from './pages/Support';
+import MembersOnly from './pages/MembersOnly';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/members" element={<MembersOnly />} />
           </Routes>
         </main>
         <Footer />
