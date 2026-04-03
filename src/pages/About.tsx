@@ -60,9 +60,11 @@ export default function About() {
               </div>
             </div>
             <div className="mt-10 lg:mt-0">
-              <div className="bg-gradient-to-br from-royal-blue-100 to-royal-blue-200 rounded-2xl p-12 aspect-square flex items-center justify-center">
-                <Globe className="h-48 w-48 text-royal-blue" />
-              </div>
+              <img
+                src="/image.png"
+                alt="Nu Mu Sigma Chapter Brothers"
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
             </div>
           </div>
 
