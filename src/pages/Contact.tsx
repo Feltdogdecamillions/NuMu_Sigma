@@ -121,7 +121,7 @@ export default function Contact() {
                 </h3>
                 <div className="flex items-center space-x-4">
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/numu.sigmas"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-royal-blue rounded-lg flex items-center justify-center hover:bg-royal-blue-700 transition-colors"
@@ -129,7 +129,7 @@ export default function Contact() {
                     <Facebook className="h-5 w-5 text-white" />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/numusigmas_swfl/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-royal-blue rounded-lg flex items-center justify-center hover:bg-royal-blue-700 transition-colors"
