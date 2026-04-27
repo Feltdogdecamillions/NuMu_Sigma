@@ -409,12 +409,12 @@ export default function MembersOnly() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://www.pbs1914.org"
+              href="https://phibetasigma1914.org/the-bluprint/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors"
             >
-              National Website
+              The BluPrint
             </a>
             <a
               href="https://www.pbs1914.org/resources"
