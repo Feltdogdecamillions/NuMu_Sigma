@@ -142,10 +142,11 @@ export default function MembersOnly() {
   ];
 
   const leadershipContacts = [
-    { position: 'President', name: 'Brother Smith', email: 'president@numusigma.org' },
-    { position: 'Vice President', name: 'Brother Johnson', email: 'vp@numusigma.org' },
-    { position: 'Treasurer', name: 'Brother Williams', email: 'treasurer@numusigma.org' },
-    { position: 'Secretary', name: 'Brother Brown', email: 'secretary@numusigma.org' },
+    { position: 'President', name: 'Marvin Kendrick', email: 'numusigma@gmail.com' },
+    { position: '1st Vice President', name: 'Spence Walker', email: 'SpWalker38@gmail.com' },
+    { position: '2nd Vice President', name: 'Felton Stevens Jr.', email: 'feltonstevensjr@gmail.com' },
+    { position: 'Treasurer', name: 'Johnny Brown', email: 'JohnnyMBrown1914@gmail.com' },
+    { position: 'Secretary', name: 'Eddie Brown', email: 'cebrown1581@gmail.com' },
   ];
 
   return (
@@ -378,7 +379,7 @@ export default function MembersOnly() {
             <Users className="h-8 w-8 text-royal-blue mr-3" />
             Leadership Contact Information
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {leadershipContacts.map((contact, index) => (
               <div
                 key={index}
@@ -431,7 +432,7 @@ export default function MembersOnly() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-slate-600">
             Need help or have questions?{' '}
-            <a href="mailto:president@numusigma.org" className="text-royal-blue font-semibold hover:text-royal-blue-700">
+            <a href="mailto:numusigma@gmail.com" className="text-royal-blue font-semibold hover:text-royal-blue-700">
               Contact the Chapter President
             </a>
           </p>
