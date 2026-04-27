@@ -7,7 +7,7 @@ interface GalleryImage {
   title: string;
   description: string | null;
   image_url: string;
-  category: 'events' | 'service' | 'brotherhood' | 'programs';
+  category: 'events' | 'service' | 'brotherhood' | 'programs' | 'awards' | 'collaboration';
   date: string | null;
   display_order: number;
 }
@@ -26,6 +26,8 @@ export default function Gallery() {
     { id: 'service', label: 'Community Service', count: 0 },
     { id: 'brotherhood', label: 'Brotherhood', count: 0 },
     { id: 'programs', label: 'Special Programs', count: 0 },
+    { id: 'awards', label: 'Awards', count: 0 },
+    { id: 'collaboration', label: 'Collaboration', count: 0 },
   ];
 
   useEffect(() => {
