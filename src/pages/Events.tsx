@@ -4,6 +4,15 @@ import { Calendar, MapPin, Clock, Users, ArrowRight } from 'lucide-react';
 export default function Events() {
   const upcomingEvents = [
     {
+      title: 'Summer Breeze Luau Sigma Party',
+      date: 'June 13, 2026',
+      time: '6:00 PM',
+      location: 'Marian Hall, 5632 Sunrise Drive, Ft. Myers, FL 33919',
+      description: 'Open Bar | Food | Music. VIP Cabanas Available | Beach Vibes | Grown & Mature Event. General Admission: $60 in advance and $75 at the door.',
+      category: 'Social Event',
+      flyer: '/image copy.png',
+    },
+    {
       title: 'Community Health Fair',
       date: 'April 15, 2026',
       time: '10:00 AM - 3:00 PM',
@@ -104,9 +113,16 @@ export default function Events() {
                 key={index}
                 className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border-l-4 border-royal-blue overflow-hidden"
               >
-                <div className="p-6 lg:p-8">
-                  <div className="lg:flex lg:items-start lg:justify-between">
-                    <div className="flex-1">
+                {'flyer' in event && event.flyer && (
+                  <div className="lg:flex">
+                    <div className="lg:w-64 lg:flex-shrink-0">
+                      <img
+                        src={event.flyer}
+                        alt={`${event.title} flyer`}
+                        className="w-full h-64 lg:h-full object-cover object-top"
+                      />
+                    </div>
+                    <div className="p-6 lg:p-8 flex-1">
                       <div className="flex items-center gap-3 mb-3">
                         <span className="inline-block px-3 py-1 bg-royal-blue-100 text-royal-blue-700 text-sm font-semibold rounded-full">
                           {event.category}
@@ -118,7 +134,7 @@ export default function Events() {
                       <p className="text-slate-600 mb-4 leading-relaxed">
                         {event.description}
                       </p>
-                      <div className="flex flex-wrap gap-4 text-slate-700">
+                      <div className="flex flex-wrap gap-4 text-slate-700 mb-6">
                         <div className="flex items-center">
                           <Calendar className="h-5 w-5 text-royal-blue mr-2" />
                           <span className="font-medium">{event.date}</span>
@@ -132,18 +148,58 @@ export default function Events() {
                           <span>{event.location}</span>
                         </div>
                       </div>
-                    </div>
-                    <div className="mt-6 lg:mt-0 lg:ml-8">
                       <Link
                         to="/contact"
                         className="inline-flex items-center px-6 py-3 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors whitespace-nowrap"
                       >
-                        Learn More
+                        Get Tickets
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </div>
                   </div>
-                </div>
+                )}
+                {(!('flyer' in event) || !event.flyer) && (
+                  <div className="p-6 lg:p-8">
+                    <div className="lg:flex lg:items-start lg:justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-3">
+                          <span className="inline-block px-3 py-1 bg-royal-blue-100 text-royal-blue-700 text-sm font-semibold rounded-full">
+                            {event.category}
+                          </span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                          {event.title}
+                        </h3>
+                        <p className="text-slate-600 mb-4 leading-relaxed">
+                          {event.description}
+                        </p>
+                        <div className="flex flex-wrap gap-4 text-slate-700">
+                          <div className="flex items-center">
+                            <Calendar className="h-5 w-5 text-royal-blue mr-2" />
+                            <span className="font-medium">{event.date}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <Clock className="h-5 w-5 text-royal-blue mr-2" />
+                            <span>{event.time}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <MapPin className="h-5 w-5 text-royal-blue mr-2" />
+                            <span>{event.location}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-6 lg:mt-0 lg:ml-8">
+                        <Link
+                          to="/contact"
+                          className="inline-flex items-center px-6 py-3 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors whitespace-nowrap"
+                        >
+                          Learn More
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
