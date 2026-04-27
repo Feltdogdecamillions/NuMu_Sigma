@@ -85,7 +85,7 @@ export default function Contact() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-slate-900 mb-1">Email</h3>
-                    <p className="text-slate-600">info@numusigma.org</p>
+                    <p className="text-slate-600">numusigma@gmail.com</p>
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ export default function Contact() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-slate-900 mb-1">Phone</h3>
-                    <p className="text-slate-600">(239) 555-SIGMA</p>
+                    <p className="text-slate-600">(239) 823-9849</p>
                   </div>
                 </div>
 
