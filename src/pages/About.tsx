@@ -165,6 +165,10 @@ export default function About() {
                 </li>
                 <li className="flex items-start">
                   <Target className="h-6 w-6 text-royal-blue flex-shrink-0 mt-1" />
+                  <span className="ml-3">Port Charlotte and Punta Gorda</span>
+                </li>
+                <li className="flex items-start">
+                  <Target className="h-6 w-6 text-royal-blue flex-shrink-0 mt-1" />
                   <span className="ml-3">Greater Lee and Collier Counties</span>
                 </li>
               </ul>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +12,7 @@ export default function Navigation() {
     { to: '/events', label: 'Events' },
     { to: '/gallery', label: 'Gallery' },
     { to: '/members', label: 'Members Only' },
+    { to: '/resources', label: 'Resources' },
     { to: '/contact', label: 'Contact' },
     { to: '/support', label: 'Support Us' },
   ];
@@ -22,7 +23,7 @@ export default function Navigation() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <Shield className="h-10 w-10 text-royal-blue" />
+              <img src="/NuMu_Sigma_Logo2.PNG" alt="Nu Mu Sigma Chapter Logo" className="h-12 w-12 object-contain" />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-royal-blue">Nu Mu Sigma</span>
                 <span className="text-xs text-slate-600 font-medium">Phi Beta Sigma</span>

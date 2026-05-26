@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Shield, Lock, LogOut, FileText, Calendar, Users, DollarSign, AlertCircle, CheckCircle, CreditCard } from 'lucide-react';
+import { Shield, Lock, LogOut, FileText, Calendar, Users, DollarSign, AlertCircle, Copy, CheckCircle } from 'lucide-react';
 
 // PASSWORD CONFIGURATION
 // To change the password, modify the value below:
@@ -10,10 +10,7 @@ export default function MembersOnly() {
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState('');
-  const [paymentAmount, setPaymentAmount] = useState('');
-  const [customAmount, setCustomAmount] = useState('');
-  const [paymentType, setPaymentType] = useState('full_dues');
-  const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [copiedField, setCopiedField] = useState<string | null>(null);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,12 +30,10 @@ export default function MembersOnly() {
     sessionStorage.removeItem('membersAuth');
   };
 
-  const handlePayment = (amount: string) => {
-    setPaymentAmount(amount);
-    // Payment integration will be handled via Stripe
-    // For now, show confirmation
-    setPaymentSuccess(true);
-    setTimeout(() => setPaymentSuccess(false), 5000);
+  const copyToClipboard = (text: string, field: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedField(field);
+    setTimeout(() => setCopiedField(null), 2000);
   };
 
   // Check session storage on component mount
@@ -195,93 +190,68 @@ export default function MembersOnly() {
                 Support our chapter's mission and stay in good standing
               </p>
               <p className="text-royal-blue-100">
-                Choose from full dues payment, partial payment, or other fees below
+                Use Zelle or Cash App to submit your dues and fees
               </p>
             </div>
 
-            {paymentSuccess && (
-              <div className="mb-6 p-4 bg-white rounded-lg flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                <div className="ml-3">
-                  <p className="text-green-800 font-semibold">Payment processing initiated!</p>
-                  <p className="text-green-700 text-sm mt-1">You will receive a confirmation email shortly.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Zelle */}
+              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4" style={{ backgroundColor: '#6D1ED4' }}>
+                    <DollarSign className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Zelle</h3>
                 </div>
-              </div>
-            )}
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Full Dues</h3>
-                <p className="text-3xl font-bold text-royal-blue mb-4">$200</p>
-                <p className="text-slate-600 mb-6">Complete semester dues payment</p>
-                <button
-                  onClick={() => handlePayment('200')}
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors"
-                >
-                  <CreditCard className="mr-2 h-5 w-5" />
-                  Pay $200
-                </button>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Partial Payment</h3>
-                <p className="text-3xl font-bold text-royal-blue mb-4">$100</p>
-                <p className="text-slate-600 mb-6">Half payment option available</p>
-                <button
-                  onClick={() => handlePayment('100')}
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors"
-                >
-                  <CreditCard className="mr-2 h-5 w-5" />
-                  Pay $100
-                </button>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Other Fees</h3>
-                <p className="text-3xl font-bold text-royal-blue mb-4">$50</p>
-                <p className="text-slate-600 mb-6">Events, fines, or donations</p>
-                <button
-                  onClick={() => handlePayment('50')}
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors"
-                >
-                  <CreditCard className="mr-2 h-5 w-5" />
-                  Pay $50
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-lg font-bold text-slate-900 mb-4">Custom Amount</h3>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <div className="flex-1">
-                  <label htmlFor="customAmount" className="block text-sm font-semibold text-slate-700 mb-2">
-                    Enter Custom Amount ($)
-                  </label>
-                  <input
-                    type="number"
-                    id="customAmount"
-                    value={customAmount}
-                    onChange={(e) => setCustomAmount(e.target.value)}
-                    placeholder="Enter amount"
-                    min="1"
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-royal-blue outline-none"
-                  />
-                </div>
-                <div className="sm:mt-7">
+                <p className="text-slate-600 mb-6">Send payment directly to our chapter Zelle account.</p>
+                <div className="bg-slate-50 rounded-lg px-4 py-3 flex items-center justify-between mb-4">
+                  <span className="font-mono text-slate-800 font-semibold">numusigmachapter@yahoo.com</span>
                   <button
-                    onClick={() => customAmount && handlePayment(customAmount)}
-                    disabled={!customAmount || parseFloat(customAmount) <= 0}
-                    className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 bg-royal-blue text-white font-semibold rounded-lg hover:bg-royal-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    onClick={() => copyToClipboard('numusigmachapter@yahoo.com', 'zelle')}
+                    className="ml-3 p-2 rounded-lg hover:bg-slate-200 transition-colors flex-shrink-0"
+                    title="Copy to clipboard"
                   >
-                    <CreditCard className="mr-2 h-5 w-5" />
-                    Pay Custom Amount
+                    {copiedField === 'zelle' ? (
+                      <CheckCircle className="h-5 w-5 text-green-600" />
+                    ) : (
+                      <Copy className="h-5 w-5 text-slate-500" />
+                    )}
                   </button>
                 </div>
+                <p className="text-sm text-slate-500 flex items-start">
+                  <AlertCircle className="h-4 w-4 text-royal-blue flex-shrink-0 mt-0.5 mr-2" />
+                  Include your full name in the memo for proper credit.
+                </p>
               </div>
-              <p className="mt-4 text-sm text-slate-600 flex items-start">
-                <AlertCircle className="h-4 w-4 text-royal-blue flex-shrink-0 mt-0.5 mr-2" />
-                Be sure to include your full name in the payment notes for proper credit.
-              </p>
+
+              {/* Cash App */}
+              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4" style={{ backgroundColor: '#00C244' }}>
+                    <DollarSign className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Cash App</h3>
+                </div>
+                <p className="text-slate-600 mb-6">Send payment to our chapter Cash App cashtag.</p>
+                <div className="bg-slate-50 rounded-lg px-4 py-3 flex items-center justify-between mb-4">
+                  <span className="font-mono text-slate-800 font-semibold">$2005NMSC</span>
+                  <button
+                    onClick={() => copyToClipboard('$2005NMSC', 'cashapp')}
+                    className="ml-3 p-2 rounded-lg hover:bg-slate-200 transition-colors flex-shrink-0"
+                    title="Copy to clipboard"
+                  >
+                    {copiedField === 'cashapp' ? (
+                      <CheckCircle className="h-5 w-5 text-green-600" />
+                    ) : (
+                      <Copy className="h-5 w-5 text-slate-500" />
+                    )}
+                  </button>
+                </div>
+                <p className="text-sm text-slate-500 flex items-start">
+                  <AlertCircle className="h-4 w-4 text-royal-blue flex-shrink-0 mt-0.5 mr-2" />
+                  Include your full name in the memo for proper credit.
+                </p>
+              </div>
             </div>
           </div>
         </div>

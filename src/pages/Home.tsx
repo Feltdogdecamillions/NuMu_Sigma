@@ -59,10 +59,10 @@ export default function Home() {
               />
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold mb-4">
-              Nu Mu Sigma Chapter
+              Phi Beta Sigma Fraternity, Incorporated
             </h1>
             <p className="text-2xl lg:text-3xl font-semibold text-royal-blue-100 mb-6">
-              Phi Beta Sigma Fraternity, Incorporated
+              Nu Mu Sigma Chapter
             </p>
             <p className="text-xl text-white mb-8">
               Fort Myers, Florida | Serving Southwest Florida

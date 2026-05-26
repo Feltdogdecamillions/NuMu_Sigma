@@ -9,6 +9,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Support from './pages/Support';
 import MembersOnly from './pages/MembersOnly';
+import Resources from './pages/Resources';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
             <Route path="/members" element={<MembersOnly />} />
+            <Route path="/resources" element={<Resources />} />
           </Routes>
         </main>
         <Footer />
