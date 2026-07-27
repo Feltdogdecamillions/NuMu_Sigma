@@ -1,24 +1,45 @@
-import { useState, useEffect } from 'react';
-import { Image, X, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
-import { supabase } from '../lib/supabase';
-
-interface GalleryImage {
-  id: string;
-  title: string;
-  description: string | null;
-  image_url: string;
-  category: 'events' | 'service' | 'brotherhood' | 'programs' | 'awards' | 'collaboration';
-  date: string | null;
-  display_order: number;
-}
+import { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { Image, X, ChevronLeft, ChevronRight, Filter, Lock, ArrowLeft } from 'lucide-react';
+import { galleryImages, type GalleryImage } from '../data/galleryImages';
 
 export default function Gallery() {
-  const [images, setImages] = useState<GalleryImage[]>([]);
-  const [filteredImages, setFilteredImages] = useState<GalleryImage[]>([]);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [filteredImages, setFilteredImages] = useState<GalleryImage[]>(galleryImages);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [lightboxImage, setLightboxImage] = useState<GalleryImage | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setIsAuthenticated(sessionStorage.getItem('membersAuth') === 'true');
+  }, []);
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-royal-blue-900 to-royal-blue-700 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full">
+          <div className="bg-white rounded-2xl shadow-2xl p-8">
+            <div className="text-center mb-8">
+              <div className="mx-auto h-16 w-16 bg-royal-blue rounded-full flex items-center justify-center mb-4">
+                <Lock className="h-8 w-8 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-2">Members Only</h2>
+              <p className="text-slate-600">
+                The photo gallery is restricted to Nu Mu Sigma Chapter members
+              </p>
+            </div>
+            <Link
+              to="/members"
+              className="w-full inline-flex items-center justify-center px-6 py-3 bg-royal-blue text-white font-bold rounded-lg hover:bg-royal-blue-700 transition-colors shadow-lg"
+            >
+              <ArrowLeft className="mr-2 h-5 w-5" />
+              Go to Members Login
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const categories = [
     { id: 'all', label: 'All Photos', count: 0 },
@@ -31,38 +52,20 @@ export default function Gallery() {
   ];
 
   useEffect(() => {
-    fetchImages();
-  }, []);
-
-  useEffect(() => {
     if (selectedCategory === 'all') {
-      setFilteredImages(images);
+      setFilteredImages(galleryImages);
     } else {
-      setFilteredImages(images.filter(img => img.category === selectedCategory));
+      setFilteredImages(galleryImages.filter(img => img.category === selectedCategory));
     }
-  }, [selectedCategory, images]);
+  }, [selectedCategory]);
 
-  const fetchImages = async () => {
-    try {
-      const { data, error } = await supabase
-        .from('gallery_images')
-        .select('*')
-        .order('display_order', { ascending: true });
-
-      if (error) throw error;
-      setImages(data || []);
-      setFilteredImages(data || []);
-    } catch (error) {
-      console.error('Error fetching images:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const getCategoryCount = (categoryId: string) => {
-    if (categoryId === 'all') return images.length;
-    return images.filter(img => img.category === categoryId).length;
-  };
+  const getCategoryCount = useMemo(
+    () => (categoryId: string) => {
+      if (categoryId === 'all') return galleryImages.length;
+      return galleryImages.filter(img => img.category === categoryId).length;
+    },
+    []
+  );
 
   const openLightbox = (image: GalleryImage, index: number) => {
     setLightboxImage(image);
@@ -141,12 +144,7 @@ export default function Gallery() {
 
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {loading ? (
-            <div className="text-center py-12">
-              <div className="inline-block h-12 w-12 border-4 border-royal-blue border-t-transparent rounded-full animate-spin"></div>
-              <p className="mt-4 text-slate-600">Loading gallery...</p>
-            </div>
-          ) : filteredImages.length === 0 ? (
+          {filteredImages.length === 0 ? (
             <div className="text-center py-12">
               <Image className="h-16 w-16 text-slate-300 mx-auto mb-4" />
               <p className="text-slate-600 text-lg">No photos in this category yet.</p>

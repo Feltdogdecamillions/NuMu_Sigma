@@ -10,7 +10,6 @@ export default function Navigation() {
     { to: '/about', label: 'About' },
     { to: '/programs', label: 'Programs' },
     { to: '/events', label: 'Events' },
-    { to: '/gallery', label: 'Gallery' },
     { to: '/members', label: 'Members Only' },
     { to: '/resources', label: 'Resources' },
     { to: '/contact', label: 'Contact' },
