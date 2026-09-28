@@ -4,7 +4,7 @@ import { Shield, Lock, LogOut, FileText, Calendar, Users, DollarSign, AlertCircl
 
 // PASSWORD CONFIGURATION
 // To change the password, modify the value below:
-const MEMBERS_PASSWORD = 'NuMuSigma2026';
+const MEMBERS_PASSWORD = 'Numusigma2027';
 // End of password configuration
 
 export default function MembersOnly() {
